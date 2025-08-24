@@ -5,3 +5,5 @@ faiss-cpu
 langchain
 langchain-openai
 ipython
+langchain-community
+
