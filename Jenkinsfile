@@ -41,9 +41,15 @@ pipeline {
                 script {
                     // Stop old container if running
                     sh 'docker stop chatbot || true && docker rm chatbot || true'
+                }
 
-                    // Run Streamlit chatbot on port 8501
-                    sh 'docker run -d -p 8501:8501 --name chatbot ${DOCKER_IMAGE}:latest'
+                // Inject .env file from Jenkins Credentials
+                withCredentials([file(credentialsId: 'Env-Keys', variable: 'ENV_FILE')]) {
+                    sh """
+                        docker run -d -p 8501:8501 --name chatbot \
+                        --env-file $ENV_FILE \
+                        ${DOCKER_IMAGE}:latest
+                    """
                 }
             }
         }
