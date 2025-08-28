@@ -10,7 +10,7 @@ from langchain_openai import AzureOpenAIEmbeddings, AzureChatOpenAI
 load_dotenv()
 
 # Streamlit page setup
-st.set_page_config(page_title="Simple Chatbot", page_icon="🤖", layout="centered")
+st.set_page_config(page_title="Simple Chatbot Using Streamlit", page_icon="🤖", layout="centered")
 st.title("🤖 Simple Chatbot")
 
 # Initialize chat model
