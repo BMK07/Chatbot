@@ -9,7 +9,7 @@ load_dotenv()
 
 # Streamlit setup
 st.set_page_config(page_title="Simple Chatbot", page_icon="🤖", layout="centered")
-st.title("🤖 Simple Chatbot with DuckDuckGo")
+st.title("🤖 Simple Chatbot with Streamlit")
 
 # Initialize model
 chat_model = AzureChatOpenAI(
