@@ -5,3 +5,6 @@ pypdf
 faiss-cpu
 langchain
 langchain-openai
+langchain-community
+duckduckgo-search
+
