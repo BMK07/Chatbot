@@ -4,9 +4,10 @@ requests
 pypdf
 faiss-cpu
 langchain
-langchain-openai
 langchain-community
+langchain-openai
 openai
+
 
 
 
